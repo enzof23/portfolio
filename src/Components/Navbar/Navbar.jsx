@@ -1,7 +1,6 @@
 import "./Navbar.scss";
 import { HiMenuAlt4, HiX } from "react-icons/hi";
 import { BsGithub, BsLinkedin } from "react-icons/bs";
-import { motion } from "framer-motion";
 import { useState } from "react";
 
 const Navbar = () => {

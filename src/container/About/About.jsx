@@ -20,13 +20,13 @@ const About = () => {
             <p className="p-text">
               Self taught web developer from France, my interest in building web
               pages dates back to 2016 when I was building e-commerce websites
-              with Shopify and Wix for personal projects. <br /> Fast forward to
-              today, I decided to make a move to become a full-time developer
-              and thus began on my journey to master the latest technologies in
-              web development. <br /> Constant seeker of new knowledge and
-              information, I find working as a developer extremely stimulating -
-              the technologies never ceasing to evolve, there will always be
-              something new to learn.
+              with Shopify and Wix for personal projects. <br /> <br /> Constant
+              seeker of new knowledge and information, I find working as a
+              developer extremely stimulating. Hence why I decided to make the
+              move to become a full-time developer and work with a company to
+              learn more and become a better developer. <br />
+              <br />I am currently looking for a new opportunity so if you're in
+              need of someone qualified and motivated...
             </p>
             <a href="#contact">Let's work together !</a>
           </div>

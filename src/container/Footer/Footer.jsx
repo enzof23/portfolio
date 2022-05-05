@@ -5,7 +5,9 @@ import { images } from "../../constants";
 import { AppWrap, MotionWrap } from "../../wrapper";
 import "./Footer.scss";
 
-import { serviceID, templateID, publicKey } from "../../constants/keys";
+const serviceID = process.env.REACT_APP_SERVICE_ID;
+const templateID = process.env.REACT_APP_TEMPLATE_ID;
+const publicKey = process.env.REACT_APP_PUBLIC_KEY;
 
 const Footer = () => {
   const [loading, setLoading] = useState(false);
@@ -42,6 +44,8 @@ const Footer = () => {
   const sendEmail = (e) => {
     e.preventDefault();
     const { name, email, message } = contactValue;
+
+    console.log(serviceID, templateID, publicKey);
 
     if (name && email && message) {
       setLoading(true);

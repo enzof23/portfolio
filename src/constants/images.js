@@ -5,6 +5,7 @@ import html from "../assets/html.png";
 import javascript from "../assets/javascript.png";
 import node from "../assets/node.png";
 import react from "../assets/react.png";
+import redux from "../assets/redux.png";
 import sass from "../assets/sass.png";
 import korean from "../assets/korean.png";
 import quiz from "../assets/quiz-app.png";
@@ -27,6 +28,7 @@ export default {
   javascript,
   node,
   react,
+  redux,
   sass,
   about01,
   about02,

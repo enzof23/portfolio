@@ -20,8 +20,8 @@ const skills = [
     image: "git",
   },
   {
-    name: "NodeJS",
-    image: "node",
+    name: "Redux",
+    image: "redux",
   },
 ];
 

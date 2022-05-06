@@ -68,16 +68,18 @@ const Header = () => {
         whileInView={scaleVariants.whileInView}
         className="app__header-circles"
       >
-        {[images.javascript, images.react, images.node].map((circle, index) => (
-          <motion.div
-            whileHover={{ scale: 1.2 }}
-            transition={{ duration: 0.5, type: "tween" }}
-            className="circle-cmp app__flex"
-            key={`circle-${index}`}
-          >
-            <img src={circle} alt={circle}></img>
-          </motion.div>
-        ))}
+        {[images.javascript, images.react, images.redux].map(
+          (circle, index) => (
+            <motion.div
+              whileHover={{ scale: 1.2 }}
+              transition={{ duration: 0.5, type: "tween" }}
+              className="circle-cmp app__flex"
+              key={`circle-${index}`}
+            >
+              <img src={circle} alt={circle}></img>
+            </motion.div>
+          )
+        )}
       </motion.div>
     </div>
   );

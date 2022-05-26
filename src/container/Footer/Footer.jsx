@@ -121,6 +121,7 @@ const Footer = () => {
             type="submit"
             className="p-text"
             onClick={(e) => sendEmail(e)}
+            disabled={loading}
           >
             {!loading ? "Send Message" : "Sending..."}
           </button>

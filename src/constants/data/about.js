@@ -4,6 +4,10 @@ const skills = [
     image: "react",
   },
   {
+    name: "Redux",
+    image: "redux",
+  },
+  {
     name: "JavaScript",
     image: "javascript",
   },
@@ -18,10 +22,6 @@ const skills = [
   {
     name: "Git",
     image: "git",
-  },
-  {
-    name: "Redux",
-    image: "redux",
   },
 ];
 

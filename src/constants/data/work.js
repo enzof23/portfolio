@@ -22,14 +22,14 @@ const works = [
     },
   },
   {
-    title: "Quiz App",
+    title: "Triv.io",
     description:
-      "Fetch questions from Open Trivia Database to create a fun trivia game. Category, number of questions and difficulty can be set manually. Based on settings, a different request will be sent to the API. Project inspired by Scrimba's React course project.",
+      "Trivia Game Application. Fetch questions from Open Trivia Database to create a fun trivia game. Category, number of questions and difficulty can be set manually. Based on settings, a different request will be sent to the API. Project inspired by Scrimba's React course project.",
     image: "quiz",
-    tech: ["React", "Bootstrap", "OpenTB API"],
+    tech: ["React", "Redux", "Scss", "axios"],
     links: {
-      github: "https://github.com/enzof23/quizzical",
-      live: "https://quizzical-project.netlify.app/",
+      github: "https://github.com/enzof23/quiz_appv2/tree/master",
+      live: "https://trivio-project.netlify.app/",
     },
   },
 ];

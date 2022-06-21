@@ -65,7 +65,7 @@ const Footer = () => {
     }
   };
 
-  return (
+  return !isFormSubmitted ? (
     <>
       <h2 className="head-text">Contact me</h2>
 
@@ -77,61 +77,58 @@ const Footer = () => {
           </a>
         </div>
       </div>
-
-      {!isFormSubmitted ? (
-        <form className="app__footer-form app__flex" ref={form}>
-          <div className="app__flex">
-            <input
-              className={`p-text ${
-                showError && !contactValue.name ? "border-error" : ""
-              }`}
-              type="text"
-              placeholder="Your Name*"
-              name="name"
-              onChange={(e) => handleChange(e.currentTarget.value, "name")}
-            />
-          </div>
-          <div className="app__flex">
-            <input
-              className={`p-text ${
-                showError && !contactValue.email ? "border-error" : ""
-              }`}
-              type="email"
-              placeholder="Your Email*"
-              name="email"
-              onChange={(e) => handleChange(e.currentTarget.value, "email")}
-            />
-          </div>
-          <div>
-            <textarea
-              className={`p-text ${
-                showError && !contactValue.message ? "border-error" : ""
-              }`}
-              placeholder="Your Message*"
-              name="message"
-              onChange={(e) => handleChange(e.currentTarget.value, "message")}
-            />
-          </div>
-          {showError ? (
-            <p className="app__footer-error">Please fill all required input</p>
-          ) : (
-            ""
-          )}
-          <button
-            type="submit"
-            className="p-text"
-            onClick={(e) => sendEmail(e)}
-            disabled={loading}
-          >
-            {!loading ? "Send Message" : "Sending..."}
-          </button>
-        </form>
-      ) : (
-        <div>
-          <h3 className="head-text">Thank you for getting in touch!</h3>
+      <form className="app__footer-form app__flex" ref={form}>
+        <div className="app__flex">
+          <input
+            className={`p-text ${
+              showError && !contactValue.name ? "border-error" : ""
+            }`}
+            type="text"
+            placeholder="Your Name*"
+            name="name"
+            onChange={(e) => handleChange(e.currentTarget.value, "name")}
+          />
         </div>
-      )}
+        <div className="app__flex">
+          <input
+            className={`p-text ${
+              showError && !contactValue.email ? "border-error" : ""
+            }`}
+            type="email"
+            placeholder="Your Email*"
+            name="email"
+            onChange={(e) => handleChange(e.currentTarget.value, "email")}
+          />
+        </div>
+        <div>
+          <textarea
+            className={`p-text ${
+              showError && !contactValue.message ? "border-error" : ""
+            }`}
+            placeholder="Your Message*"
+            name="message"
+            onChange={(e) => handleChange(e.currentTarget.value, "message")}
+          />
+        </div>
+        {showError ? (
+          <p className="app__footer-error">Please fill all required input</p>
+        ) : (
+          ""
+        )}
+        <button
+          type="submit"
+          className="p-text"
+          onClick={(e) => sendEmail(e)}
+          disabled={loading}
+        >
+          {!loading ? "Send Message" : "Sending..."}
+        </button>
+      </form>
     </>
+  ) : (
+    <div>
+      <h3 className="head-text">Thank you for getting in touch!</h3>
+    </div>
   );
 };
 

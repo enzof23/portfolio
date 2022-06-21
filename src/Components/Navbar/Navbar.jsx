@@ -17,7 +17,7 @@ const Navbar = () => {
         ))}
         <li className="app__flex p-text">
           <div />
-          <a href={images.resume} target="_blank">
+          <a href={images.resume} target="blank">
             my resume
           </a>
         </li>

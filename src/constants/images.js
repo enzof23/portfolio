@@ -19,6 +19,8 @@ import about04 from "../assets/about04.png";
 import profile from "../assets/profile.png";
 import circle from "../assets/circle.svg";
 
+import resume from "../assets/Resume.pdf";
+
 // eslint-disable-next-line
 export default {
   email,
@@ -39,4 +41,5 @@ export default {
   quiz,
   portfolio,
   bootstrap,
+  resume,
 };

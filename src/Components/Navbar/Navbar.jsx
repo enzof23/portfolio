@@ -2,6 +2,7 @@ import "./Navbar.scss";
 import { HiMenuAlt4, HiX } from "react-icons/hi";
 import { BsGithub, BsLinkedin } from "react-icons/bs";
 import { useState } from "react";
+import images from "../../constants/images";
 
 const Navbar = () => {
   const [toggle, setToggle] = useState(false);
@@ -14,10 +15,12 @@ const Navbar = () => {
             <a href={`#${item}`}>{item}</a>
           </li>
         ))}
-        {/* <li className="app__flex p-text">
+        <li className="app__flex p-text">
           <div />
-          <a href="#">my resume</a>
-        </li> */}
+          <a href={images.resume} target="_blank">
+            my resume
+          </a>
+        </li>
       </ul>
 
       <div className="app__navbar-menu">

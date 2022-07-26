@@ -6,11 +6,14 @@ import javascript from "../assets/javascript.png";
 import node from "../assets/node.png";
 import react from "../assets/react.png";
 import redux from "../assets/redux.png";
-import sass from "../assets/sass.png";
+import typescript from "../assets/typescript.png";
 import korean from "../assets/korean.png";
 import quiz from "../assets/quiz-app.png";
 import portfolio from "../assets/portfolio.png";
+import words2go from "../assets/words2go.png";
 import bootstrap from "../assets/bootstrap.svg";
+import firebase from "../assets/firebase.svg";
+import materialui from "../assets/materialui.png";
 
 import about01 from "../assets/about01.png";
 import about02 from "../assets/about02.png";
@@ -31,7 +34,9 @@ export default {
   node,
   react,
   redux,
-  sass,
+  typescript,
+  firebase,
+  materialui,
   about01,
   about02,
   about04,
@@ -40,6 +45,7 @@ export default {
   korean,
   quiz,
   portfolio,
+  words2go,
   bootstrap,
   resume,
 };

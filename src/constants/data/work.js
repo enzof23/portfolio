@@ -1,13 +1,13 @@
 const works = [
   {
-    title: "Korean Notebook",
+    title: "Words2Go",
     description:
-      "Create a vocabulary list for your Korean studies and practice what you've learned with flashcards and some games. The user is able to add words from the input to local storage, then rendered in a table where it can be modified.",
-    image: "korean",
-    tech: ["React", "React-Router", "JSX", "Bootstrap"],
+      "Web app that lets users organize and practice their vocabulary studies. Users can create an account to save lists and add, update or delete words to it. Lists are saved and fetched from Firebase using user key and client data is updated in real time.",
+    image: "words2go",
+    tech: ["React", "React-Router", "Typescript", "Firebase", "MaterialUI"],
     links: {
-      github: "https://github.com/enzof23/korean-notebook",
-      live: "https://korean-notebook.netlify.app/",
+      github: "https://github.com/enzof23/lang_nb",
+      live: "https://words2go.netlify.app/",
     },
   },
   {

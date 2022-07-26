@@ -68,7 +68,7 @@ const Header = () => {
         whileInView={scaleVariants.whileInView}
         className="app__header-circles"
       >
-        {[images.javascript, images.react, images.redux].map(
+        {[images.javascript, images.react, images.materialui].map(
           (circle, index) => (
             <motion.div
               whileHover={{ scale: 1.2 }}

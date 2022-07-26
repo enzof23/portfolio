@@ -12,16 +12,16 @@ const skills = [
     image: "javascript",
   },
   {
-    name: "Sass",
-    image: "sass",
+    name: "Typescript",
+    image: "typescript",
   },
   {
-    name: "Bootstrap",
-    image: "bootstrap",
+    name: "Firebase",
+    image: "firebase",
   },
   {
-    name: "Git",
-    image: "git",
+    name: "MaterialUI",
+    image: "materialui",
   },
 ];
 

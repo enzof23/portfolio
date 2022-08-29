@@ -1,4 +1,6 @@
-export { default as About } from "./About/About";
-export { default as Footer } from "./Footer/Footer";
-export { default as Header } from "./Header/Header";
-export { default as Work } from "./Work/Work";
+import About from "./About/About";
+import Footer from "./Footer/Footer";
+import Header from "./Header/Header";
+import Work from "./Work/Work";
+
+export { About, Footer, Header, Work };

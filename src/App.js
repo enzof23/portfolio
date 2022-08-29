@@ -1,4 +1,4 @@
-import { About, Footer, Header, Work } from "./components";
+import { About, Footer, Header, Work } from "./Components";
 import { Navbar, SocialMedia } from "./layouts";
 import "./App.scss";
 

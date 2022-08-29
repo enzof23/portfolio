@@ -65,54 +65,62 @@ const Footer = () => {
     }
   };
 
-  return !isFormSubmitted ? (
+  return (
     <>
       <div className="footer__content">
-        <form className="footer__form app__flex" ref={form}>
-          <h2 className="head-text">
-            Contact <span style={{ fontWeight: 800 }}>me</span>
-          </h2>
-          <input
-            className={`p-text ${
-              showError && !contactValue.name ? "border-error" : ""
-            }`}
-            type="text"
-            placeholder="Your Name*"
-            name="name"
-            onChange={(e) => handleChange(e.currentTarget.value, "name")}
-          />
+        {!isFormSubmitted ? (
+          <form className="footer__form app__flex" ref={form}>
+            <h2 className="head-text">
+              Contact <span style={{ fontWeight: 800 }}>me</span>
+            </h2>
+            <input
+              className={`p-text ${
+                showError && !contactValue.name ? "border-error" : ""
+              }`}
+              type="text"
+              placeholder="Your Name*"
+              name="name"
+              onChange={(e) => handleChange(e.currentTarget.value, "name")}
+            />
 
-          <input
-            className={`p-text ${
-              showError && !contactValue.email ? "border-error" : ""
-            }`}
-            type="email"
-            placeholder="Your Email*"
-            name="email"
-            onChange={(e) => handleChange(e.currentTarget.value, "email")}
-          />
-          <textarea
-            className={`p-text ${
-              showError && !contactValue.message ? "border-error" : ""
-            }`}
-            placeholder="Your Message*"
-            name="message"
-            onChange={(e) => handleChange(e.currentTarget.value, "message")}
-          />
-          {showError ? (
-            <p className="footer__error">Please fill all required input</p>
-          ) : (
-            ""
-          )}
-          <button
-            type="submit"
-            className="p-text"
-            onClick={(e) => sendEmail(e)}
-            disabled={loading}
-          >
-            {!loading ? "Send Message" : "Sending..."}
-          </button>
-        </form>
+            <input
+              className={`p-text ${
+                showError && !contactValue.email ? "border-error" : ""
+              }`}
+              type="email"
+              placeholder="Your Email*"
+              name="email"
+              onChange={(e) => handleChange(e.currentTarget.value, "email")}
+            />
+            <textarea
+              className={`p-text ${
+                showError && !contactValue.message ? "border-error" : ""
+              }`}
+              placeholder="Your Message*"
+              name="message"
+              onChange={(e) => handleChange(e.currentTarget.value, "message")}
+            />
+            {showError ? (
+              <p className="footer__error">Please fill all required input</p>
+            ) : (
+              ""
+            )}
+            <button
+              type="submit"
+              className="p-text"
+              onClick={(e) => sendEmail(e)}
+              disabled={loading}
+            >
+              {!loading ? "Send Message" : "Sending..."}
+            </button>
+          </form>
+        ) : (
+          <div style={{ alignSelf: "center" }}>
+            <h3 className="head-text">
+              Thank you for getting in <span>touch!</span>
+            </h3>
+          </div>
+        )}
 
         <div className="footer__links">
           <h2 className="head-text">
@@ -143,10 +151,6 @@ const Footer = () => {
         </div>
       </div>
     </>
-  ) : (
-    <div>
-      <h3 className="head-text">Thank you for getting in touch!</h3>
-    </div>
   );
 };
 

@@ -1,7 +1,6 @@
-import React from "react";
 import { motion } from "framer-motion";
 import { images } from "../../constants";
-import { AppWrap, MotionWrap } from "../../wrapper";
+import { AppWrap, MotionWrap } from "../../layouts";
 import { skills, abouts } from "../../constants/data/about";
 
 import "./About.scss";
@@ -9,13 +8,12 @@ import "./About.scss";
 const About = () => {
   return (
     <>
-      <h2 className="head-text">
-        About <span>Me</span>
-      </h2>
-
-      <div className="app__about-me">
-        <div className="app__about-profile">
-          <div className="app__about-intro">
+      <div className="about__content">
+        <h2 className="about__header head-text">
+          About <span>Me</span>
+        </h2>
+        <div className="about__profile">
+          <div className="about__intro">
             <h3>Who Am I ?</h3>
             <p className="p-text">
               Self taught web developer from France, my interest in building web
@@ -32,16 +30,17 @@ const About = () => {
             </p>
             <a href="#contact">Let's work together !</a>
           </div>
-          <div className="app__about-skills">
-            <h4>
-              Here are a few technologies I've been working with recently:
-            </h4>
-            <div className="app__about-skill">
+          <div>
+            <h3 className="h3-subtitle">
+              Here are a few <span>technologies</span> I've been working with
+              recently:
+            </h3>
+            <div className="about__skills">
               {skills?.map((skill) => (
                 <motion.div
                   whileHover={{ scale: 1.1 }}
                   transition={{ duration: 0.3, type: "tween" }}
-                  className="app__about-skill-item app__flex"
+                  className="about__skill app__flex"
                   key={skill.name}
                 >
                   <div className="app__flex">
@@ -53,20 +52,20 @@ const About = () => {
             </div>
           </div>
         </div>
-        <div className="app__about-talent">
+        <div className="about__talent">
           {abouts.map((about) => (
             <motion.div
               whileInView={{ opacity: 1 }}
               whileHover={{ scale: 1.1 }}
               transition={{ duration: 0.5, type: "tween" }}
-              className="app__talent-item"
+              className="about__talent-item"
               key={about.title}
             >
               <img src={images[about.image]} alt={about.title} />
-              <h2 className="bold-text" style={{ marginTop: 10 }}>
+              <h2 className="bold-text" style={{ marginTop: 8 }}>
                 {about.title}
               </h2>
-              <p className="p-text" style={{ marginTop: 5 }}>
+              <p className="p-text" style={{ marginTop: 3 }}>
                 {about.description}
               </p>
             </motion.div>
@@ -78,7 +77,7 @@ const About = () => {
 };
 
 export default AppWrap(
-  MotionWrap(About, "app__about"),
+  MotionWrap(About, "about__container"),
   "about",
-  "app__secondarybg"
+  "background__primary"
 );

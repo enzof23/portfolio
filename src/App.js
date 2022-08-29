@@ -1,5 +1,5 @@
-import { About, Footer, Header, Work } from "./container";
-import { Navbar, SocialMedia } from "./Components";
+import { About, Footer, Header, Work } from "./components";
+import { Navbar, SocialMedia } from "./layouts";
 import "./App.scss";
 
 const App = () => {

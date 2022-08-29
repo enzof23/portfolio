@@ -23,20 +23,24 @@ const skills = [
     name: "MaterialUI",
     image: "materialui",
   },
+  {
+    name: "TailwindCSS",
+    image: "tailwindcss",
+  },
 ];
 
 const abouts = [
-  {
-    title: "Intuitive",
-    description:
-      "Only a few clicks away from destination - web pages easy to navigate.",
-    image: "about04",
-  },
   {
     title: "Dynamic",
     description:
       "Make pages come to life and allow users to have an interactive experience",
     image: "about01",
+  },
+  {
+    title: "Intuitive",
+    description:
+      "Only a few clicks away from destination - web pages easy to navigate.",
+    image: "about04",
   },
   {
     title: "Responsive",

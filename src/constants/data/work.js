@@ -1,4 +1,4 @@
-const works = [
+const projects = [
   {
     title: "Words2Go",
     description:
@@ -21,17 +21,6 @@ const works = [
       live: "https://trivio-project.netlify.app/",
     },
   },
-  {
-    title: "Modern Portfolio",
-    description:
-      "Personal portfolio to display my latest work. Built with React, it is fully responsive to fit any device. Design inspired by Javascript Mastery tutorial.",
-    image: "portfolio",
-    tech: ["React", "Sass", "Framer-Motion"],
-    links: {
-      github: "https://github.com/enzof23/portfolio",
-      live: "https://enzofilippo.netlify.app/",
-    },
-  },
 ];
 
-export default works;
+export default projects;

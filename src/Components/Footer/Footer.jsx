@@ -2,7 +2,7 @@ import React, { useState, useRef } from "react";
 import emailjs from "@emailjs/browser";
 
 import { images } from "../../constants";
-import { AppWrap, MotionWrap } from "../../wrapper";
+import { AppWrap, MotionWrap } from "../../layouts";
 import "./Footer.scss";
 
 const serviceID = process.env.REACT_APP_SERVICE_ID;
@@ -67,18 +67,11 @@ const Footer = () => {
 
   return !isFormSubmitted ? (
     <>
-      <h2 className="head-text">Contact me</h2>
-
-      <div className="app__footer-cards">
-        <div className="app__footer-card">
-          <img src={images.email} alt="email" />
-          <a href="mailto: enzo.filippo23@gmail.com" className="p-text">
-            Send me an email !
-          </a>
-        </div>
-      </div>
-      <form className="app__footer-form app__flex" ref={form}>
-        <div className="app__flex">
+      <div className="footer__content">
+        <form className="footer__form app__flex" ref={form}>
+          <h2 className="head-text">
+            Contact <span style={{ fontWeight: 800 }}>me</span>
+          </h2>
           <input
             className={`p-text ${
               showError && !contactValue.name ? "border-error" : ""
@@ -88,8 +81,7 @@ const Footer = () => {
             name="name"
             onChange={(e) => handleChange(e.currentTarget.value, "name")}
           />
-        </div>
-        <div className="app__flex">
+
           <input
             className={`p-text ${
               showError && !contactValue.email ? "border-error" : ""
@@ -99,8 +91,6 @@ const Footer = () => {
             name="email"
             onChange={(e) => handleChange(e.currentTarget.value, "email")}
           />
-        </div>
-        <div>
           <textarea
             className={`p-text ${
               showError && !contactValue.message ? "border-error" : ""
@@ -109,21 +99,49 @@ const Footer = () => {
             name="message"
             onChange={(e) => handleChange(e.currentTarget.value, "message")}
           />
+          {showError ? (
+            <p className="footer__error">Please fill all required input</p>
+          ) : (
+            ""
+          )}
+          <button
+            type="submit"
+            className="p-text"
+            onClick={(e) => sendEmail(e)}
+            disabled={loading}
+          >
+            {!loading ? "Send Message" : "Sending..."}
+          </button>
+        </form>
+
+        <div className="footer__links">
+          <h2 className="head-text">
+            Useful <span style={{ fontWeight: 800 }}>links</span>
+          </h2>
+          <a href="mailto: enzo.filippo23@gmail.com" className="footer__link">
+            <img src={images.email} alt="email" />
+            Send me an email !
+          </a>
+          <a
+            href="https://github.com/enzof23"
+            target="_blank"
+            rel="noreferrer"
+            className="footer__link"
+          >
+            <img src={images.github} alt="email" />
+            Github
+          </a>
+          <a
+            href="https://www.linkedin.com/in/enzo-filippo-31559bab/"
+            target="_blank"
+            rel="noreferrer"
+            className="footer__link"
+          >
+            <img src={images.linkedin} alt="email" />
+            LinkedIn
+          </a>
         </div>
-        {showError ? (
-          <p className="app__footer-error">Please fill all required input</p>
-        ) : (
-          ""
-        )}
-        <button
-          type="submit"
-          className="p-text"
-          onClick={(e) => sendEmail(e)}
-          disabled={loading}
-        >
-          {!loading ? "Send Message" : "Sending..."}
-        </button>
-      </form>
+      </div>
     </>
   ) : (
     <div>
@@ -133,7 +151,7 @@ const Footer = () => {
 };
 
 export default AppWrap(
-  MotionWrap(Footer, "app__footer"),
+  MotionWrap(Footer, "footer__container"),
   "contact",
-  "app__whitebg"
+  "background__secondary"
 );

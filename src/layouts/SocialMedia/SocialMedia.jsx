@@ -1,9 +1,11 @@
 import { motion } from "framer-motion";
 import { BsGithub, BsLinkedin } from "react-icons/bs";
 
+import "./SocialMedia.scss";
+
 const SocialMedia = () => {
   return (
-    <div className="app__social">
+    <div className="social__container">
       <motion.div
         whileHover={{ scale: 1.1 }}
         transition={{ duration: 0.5, type: "tween" }}

@@ -12,105 +12,66 @@ const publicKey = process.env.REACT_APP_PUBLIC_KEY;
 const Footer = () => {
   const [loading, setLoading] = useState(false);
   const [isFormSubmitted, setIsFormSubmitted] = useState(false);
-  const [contactValue, setContactValue] = useState({
-    name: "",
-    email: "",
-    message: "",
-  });
-  const [showError, setShowError] = useState(false);
 
   const form = useRef();
 
-  const handleChange = (value, type) => {
-    if (showError) {
-      setShowError(false);
-    }
-
-    switch (type) {
-      case "name":
-        setContactValue((prevValue) => ({ ...prevValue, name: value }));
-        break;
-      case "email":
-        setContactValue((prevValue) => ({ ...prevValue, email: value }));
-        break;
-      case "message":
-        setContactValue((prevValue) => ({ ...prevValue, message: value }));
-        break;
-      default:
-        console.log("naught");
-    }
-  };
-
   const sendEmail = (e) => {
     e.preventDefault();
-    const { name, email, message } = contactValue;
+    setLoading(true);
 
-    console.log(serviceID, templateID, publicKey);
-
-    if (name && email && message) {
-      setLoading(true);
-
-      emailjs.sendForm(serviceID, templateID, form.current, publicKey).then(
-        (result) => {
-          setLoading(false);
-          console.log(result.text);
-          setIsFormSubmitted(true);
-        },
-        (error) => {
-          console.log(error.text);
-        }
-      );
-    } else {
-      setShowError(true);
-    }
+    emailjs.sendForm(serviceID, templateID, form.current, publicKey).then(
+      (result) => {
+        setLoading(false);
+        console.log(result.text);
+        setIsFormSubmitted(true);
+      },
+      (error) => {
+        console.log(error.text);
+      }
+    );
   };
 
   return (
     <>
       <div className="footer__content">
         {!isFormSubmitted ? (
-          <form className="footer__form app__flex" ref={form}>
+          <form
+            className="footer__form app__flex"
+            ref={form}
+            onSubmit={sendEmail}
+          >
             <h2 className="head-text">
               Contact <span style={{ fontWeight: 800 }}>me</span>
             </h2>
             <input
-              className={`p-text ${
-                showError && !contactValue.name ? "border-error" : ""
-              }`}
+              className="p-text"
               type="text"
               placeholder="Your Name*"
               name="name"
-              onChange={(e) => handleChange(e.currentTarget.value, "name")}
+              required
+            />
+            <input
+              className="p-text"
+              type="text"
+              placeholder="phone"
+              name="phone"
             />
 
             <input
-              className={`p-text ${
-                showError && !contactValue.email ? "border-error" : ""
-              }`}
+              className="p-text"
               type="email"
               placeholder="Your Email*"
               name="email"
-              onChange={(e) => handleChange(e.currentTarget.value, "email")}
+              required
             />
             <textarea
-              className={`p-text ${
-                showError && !contactValue.message ? "border-error" : ""
-              }`}
+              required
+              className="p-text"
               placeholder="Your Message*"
               name="message"
-              onChange={(e) => handleChange(e.currentTarget.value, "message")}
             />
-            {showError ? (
-              <p className="footer__error">Please fill all required input</p>
-            ) : (
-              ""
-            )}
-            <button
-              type="submit"
-              className="p-text"
-              onClick={(e) => sendEmail(e)}
-              disabled={loading}
-            >
+
+            <button type="submit" className="p-text" disabled={loading}>
               {!loading ? "Send Message" : "Sending..."}
             </button>
           </form>

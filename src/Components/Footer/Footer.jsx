@@ -50,12 +50,6 @@ const Footer = () => {
               name="name"
               required
             />
-            <input
-              className="p-text"
-              type="text"
-              placeholder="phone"
-              name="phone"
-            />
 
             <input
               className="p-text"

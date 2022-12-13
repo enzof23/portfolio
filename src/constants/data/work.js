@@ -2,11 +2,11 @@ const projects = [
   {
     title: "Words2Go",
     description:
-      "Web app that lets users organize and practice their vocabulary studies. Users can create an account to save lists and add, update or delete words to it. Lists are saved and fetched from Firebase using user key and client data is updated in real time.",
+      "Web app that lets users organize and practice their vocabulary studies. Users can create an account to save lists and add, update or delete words to it. Lists are saved in Firebase Firestore.",
     image: "words2go",
-    tech: ["React", "React-Router", "Typescript", "Firebase", "MaterialUI"],
+    tech: ["React", "Typescript", "React Query", "React Router", "Firebase"],
     links: {
-      github: "https://github.com/enzof23/lang_nb",
+      github: "https://github.com/enzof23/words2go",
       live: "https://words2go.vercel.app/",
     },
   },

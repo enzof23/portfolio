@@ -7,7 +7,7 @@ const projects = [
     tech: ["React", "React-Router", "Typescript", "Firebase", "MaterialUI"],
     links: {
       github: "https://github.com/enzof23/lang_nb",
-      live: "https://words2go.netlify.app/",
+      live: "https://words2go.vercel.app/",
     },
   },
   {

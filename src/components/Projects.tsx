@@ -4,22 +4,22 @@ import { Lucide } from "./icons";
 // TODO : update projects
 const projects = [
   {
-    title: "astrolinkt",
-    description: "Astro template",
+    title: "project name",
+    description: "description",
     icon: Lucide.IconImage,
-    url: "https://github.com/flamrdevs/astrolinkt",
+    url: "https://github.com/enzof23",
   },
   {
-    title: "astrovehnt",
-    description: "Astro template",
+    title: "project name",
+    description: "description",
     icon: Lucide.IconImage,
-    url: "https://github.com/flamrdevs/astrovehnt",
+    url: "https://github.com/enzof23",
   },
   {
-    title: "astrobuckt",
-    description: "Astro template",
+    title: "project name",
+    description: "description",
     icon: Lucide.IconImage,
-    url: "https://github.com/flamrdevs/astrobuckt",
+    url: "https://github.com/enzof23",
   },
 ];
 
@@ -51,7 +51,9 @@ export default () => {
                   </div>
 
                   <div>
-                    <h3 className="transition duration-300 group-hover:translate-x-1 text-neutral-12 text-sm">{project.title}</h3>
+                    <h3 className="transition duration-300 group-hover:translate-x-1 text-neutral-12 text-sm">
+                      {project.title}
+                    </h3>
                     <div className="transition duration-300 group-hover:translate-x-px text-neutral-10 group-hover:text-neutral-11 text-xs">
                       {project.description}
                     </div>

@@ -8,7 +8,10 @@ const Globe = () => {
   const ref = useRef<HTMLCanvasElement | null>(null);
   const pointerInteracting = useRef<number | null>(null);
   const pointerInteractionMovement = useRef<number>(0);
-  const [{ r }, api] = useSpring(() => ({ r: 0, config: { mass: 1, tension: 280, friction: 40, precision: 0.001 } }));
+  const [{ r }, api] = useSpring(() => ({
+    r: 0,
+    config: { mass: 1, tension: 280, friction: 40, precision: 0.001 },
+  }));
 
   useEffect(() => {
     let phi = 0;
@@ -21,7 +24,7 @@ const Globe = () => {
       width: width * 2,
       height: width * 2,
       phi: 0,
-      theta: 0.3,
+      theta: 0,
       dark: 1,
       diffuse: 3,
       mapSamples: 16000,
@@ -32,7 +35,7 @@ const Globe = () => {
       markers: [
         {
           // TODO : update location. https://cobe.vercel.app/docs/api#markers
-          location: [-7.5360639, 112.2384017],
+          location: [-41.17, 174.7787],
           size: 0.1,
         },
       ],
@@ -56,7 +59,8 @@ const Globe = () => {
         <canvas
           ref={ref}
           onPointerDown={(e) => {
-            pointerInteracting.current = e.clientX - pointerInteractionMovement.current;
+            pointerInteracting.current =
+              e.clientX - pointerInteractionMovement.current;
             ref.current!.style.cursor = "grabbing";
           }}
           onPointerUp={() => {
@@ -82,7 +86,12 @@ const Globe = () => {
             }
           }}
           className="w-full h-full"
-          style={{ cursor: "grab", contain: "layout paint size", opacity: 0, transition: "opacity 1s ease" }}
+          style={{
+            cursor: "grab",
+            contain: "layout paint size",
+            opacity: 0,
+            transition: "opacity 1s ease",
+          }}
         />
       </div>
     </div>

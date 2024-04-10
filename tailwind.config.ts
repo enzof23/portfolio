@@ -27,6 +27,14 @@ export default {
         // TODO : fonts
         sans: ["Inter"].concat(defaultTheme.fontFamily.sans),
         mono: ["Roboto Mono"].concat(defaultTheme.fontFamily.mono),
+        orbitron: "Orbitron",
+      },
+      gridTemplateRows: {
+        "layout-sm": "repeat(6, fit-content)",
+        "layout-md": "repeat(4, fit-content)",
+      },
+      screens: {
+        xs: "360px",
       },
     },
   },

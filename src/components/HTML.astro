@@ -8,16 +8,9 @@ type Props = HTMLAttributes<"html"> & {
   description?: string;
 };
 
-const {
-  // TODO : html default title
-  title = "astrovehnt",
-  // TODO : html default description
-  description = title,
-  ...html
-} = Astro.props;
+const { title = "Enzo Filippo", description = title, ...html } = Astro.props;
 ---
 
-<!-- TODO : html data-theme = "light" or "dark" -->
 <html lang="en" data-theme="dark" {...html}>
   <head>
     <meta charset="utf-8" />
@@ -34,10 +27,15 @@ const {
       href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap"
       rel="stylesheet"
     />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap"
+      rel="stylesheet"
+    />
 
     <slot name="head" />
   </head>
-  <body>
+
+  <body class="flex flex-col justify-center min-h-screen">
     <slot name="body" />
   </body>
 </html>

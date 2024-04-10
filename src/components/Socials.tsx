@@ -4,19 +4,19 @@ import { Simple } from "./icons";
 // TODO : update socials
 const socials = [
   {
-    href: "https://github.com",
+    href: "https://github.com/enzof23",
     name: "GitHub",
     icon: Simple.IconGitHub,
   },
   {
-    href: "https://x.com",
-    name: "X",
-    icon: Simple.IconX,
+    href: "https://www.linkedin.com/in/enzo-filippo-31559bab/",
+    name: "LinkedIn",
+    icon: Simple.IconLinkedIn,
   },
   {
-    href: "https://www.youtube.com",
-    name: "Youtube",
-    icon: Simple.IconYoutube,
+    href: "mailto:enzo.filippo23@gmail.com",
+    name: "Mail",
+    icon: Simple.IconGmail,
   },
 ];
 

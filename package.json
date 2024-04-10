@@ -1,16 +1,7 @@
 {
-  "name": "astrovehnt",
+  "name": "portfolio",
   "type": "module",
   "version": "0.0.1",
-  "license": "MIT",
-  "author": {
-    "name": "flamrdevs",
-    "url": "https://github.com/flamrdevs"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/flamrdevs/astrovehnt.git"
-  },
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",

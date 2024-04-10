@@ -1,41 +1,53 @@
 ---
 import MainLayout from "~/layouts/MainLayout.astro";
 
-import Picture from "~/components/Picture.tsx";
+import Name from "~/components/Name.tsx";
 import About from "~/components/About.tsx";
 import Projects from "~/components/Projects.tsx";
-import DevelopedBy from "~/components/DevelopedBy.tsx";
 import Globe from "~/components/Globe.tsx";
 import Stacks from "~/components/Stacks.tsx";
 import Socials from "~/components/Socials.tsx";
+import DevelopedBy from "~/components/DevelopedBy.tsx";
 ---
 
 <MainLayout>
   <main
-    class="container mx-auto grid grid-cols-4 md:grid-cols-8 xl:grid-cols-12 grid-rows-8 md:grid-rows-5 xl:grid-rows-3 gap-4 md:gap-6 xl:gap-6 p-4 min-h-[140rem] sm:min-h-[100rem] md:min-h-[70rem] lg:min-h-[60rem] xl:min-h-[50rem]"
+    class="h-full container mx-auto grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 grid-rows-layout-sm md:grid-rows-layout-md xl:grid-rows-4 gap-4 md:gap-6 p-4 xl:min-h-[700px]"
   >
-    <div class="card col-span-4 row-span-1 md:row-span-2">
-      <Picture client:idle />
+    <div class="card row-start-1 md:col-start-2">
+      <Name />
     </div>
-    <div class="card col-span-4 row-span-1">
+
+    <div class="card row-start-2 md:col-start-2 xl:row-span-2">
       <About />
     </div>
-    <div class="card col-span-4 row-span-1">
-      <Projects />
-    </div>
-    <div class="card col-span-4 row-span-1">
-      <DevelopedBy client:idle />
-    </div>
-    <div class="card col-span-4 row-span-2">
-      <Globe client:idle />
-    </div>
-    <div class="card col-span-4 row-span-1">
+
+    <div
+      class="card row-start-3 md:col-start-1 xl:row-span-2 xl:col-start-3 xl:row-start-1"
+    >
       <Stacks />
     </div>
-    <div class="card col-span-4 md:col-span-8 xl:col-span-4 row-span-1">
+
+    <div
+      class="card row-start-4 md:row-start-3 md:col-start-2 xl:row-span-2 xl:col-start-3 xl:row-start-3"
+    >
+      <Projects />
+    </div>
+
+    <div
+      class="card row-start-5 md:row-start-4 md:col-span-2 xl:col-span-1 xl:col-start-2 xl:row-start-4"
+    >
       <Socials />
     </div>
+
+    <div
+      class="card row-start-6 md:row-start-1 md:col-start-1 md:row-span-2 xl:row-end-5"
+    >
+      <Globe client:idle />
+    </div>
   </main>
+
+  <DevelopedBy />
 </MainLayout>
 
 <style>
@@ -46,7 +58,8 @@ import Socials from "~/components/Socials.tsx";
     border-radius: 2rem;
     background:
       padding-box linear-gradient(rgb(var(--neutral-2)), rgb(var(--neutral-2))),
-      border-box linear-gradient(rgb(var(--neutral-4)), rgb(var(--neutral-3) / 0.5));
+      border-box
+        linear-gradient(rgb(var(--neutral-4)), rgb(var(--neutral-3) / 0.5));
     overflow: hidden;
 
     @apply transition ring-2 ring-offset-0 ring-neutral-5 ring-offset-neutral-1;

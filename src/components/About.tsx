@@ -1,5 +1,3 @@
-// TODO : update about
-
 export default () => {
   return (
     <div className="flex flex-col gap-2 items-start p-6 md:px-5 md:py-8 xl:px-6 w-full h-full">
@@ -15,7 +13,7 @@ export default () => {
         daydreaming about my next adventure.
       </p>
 
-      <p>Interested in creating some digital magic ? Let's work together!</p>
+      <p>Interested in creating some digital magic? Let's work together!</p>
     </div>
   );
 };

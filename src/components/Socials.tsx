@@ -39,7 +39,10 @@ export default () => {
                 target="_blank"
                 aria-label="Open"
               >
-                <social.icon className="transition size-1/3 text-neutral-10 group-hover:text-neutral-11 group-hover:scale-110 group-focus-visible:text-neutral-11 group-focus-visible:scale-110" />
+                <social.icon
+                  size={24}
+                  className="transition text-neutral-10 group-hover:text-neutral-11 group-hover:scale-110 group-focus-visible:text-neutral-11 group-focus-visible:scale-110"
+                />
               </a>
             </li>
           );

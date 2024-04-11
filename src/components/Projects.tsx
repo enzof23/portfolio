@@ -1,25 +1,41 @@
 import { cn } from "./ui/utils.ts";
-import { Lucide } from "./icons";
+import { Simple } from "~/components/icons/index.ts";
 
-// TODO : update projects
 const projects = [
   {
-    title: "project name",
-    description: "description",
-    icon: Lucide.IconImage,
-    url: "https://github.com/enzof23",
+    title: "Heliner",
+    description: "Landing page for marketing campaign",
+    status: "delivered",
+    icon: Simple.IconHeliner,
+    url: "https://github.com/enzof23/heliner",
   },
   {
-    title: "project name",
-    description: "description",
-    icon: Lucide.IconImage,
-    url: "https://github.com/enzof23",
+    title: "InfoShare",
+    description: "Share your links and contacts from a single input",
+    status: "deployed",
+    icon: Simple.IconInfoshare,
+    url: "https://infoshare.vercel.app/",
   },
   {
-    title: "project name",
-    description: "description",
-    icon: Lucide.IconImage,
-    url: "https://github.com/enzof23",
+    title: "Madame IrmIA",
+    description: "AI generated Tarot cards readings",
+    status: "in development",
+    icon: Simple.IconIrmia,
+    url: "https://app.madameirmia.com",
+  },
+  {
+    title: "ResumAI",
+    description: "AI generated cover letters based on job offer & CV",
+    status: "in development",
+    icon: Simple.IconResumai,
+    url: "https://resumai-project.vercel.app/",
+  },
+  {
+    title: "Runalyse",
+    description: "Web app to track running performance",
+    status: "prototype",
+    icon: Simple.IconRunalyse,
+    url: "/",
   },
 ];
 
@@ -42,11 +58,11 @@ export default () => {
                 target="_blank"
                 aria-label="Open"
               >
-                <div className="flex flex-row items-stretch gap-5 pl-2">
+                <div className="flex flex-row items-stretch gap-5">
                   <div className="flex items-center justify-center">
                     <project.icon
-                      size={24}
-                      className="transition duration-300 group-hover:-translate-y-1 text-neutral-10 group-hover:text-neutral-11"
+                      size={28}
+                      className={`transition duration-300 group-hover:-translate-y-1 text-neutral-10 group-hover:text-neutral-11`}
                     />
                   </div>
 
@@ -56,6 +72,9 @@ export default () => {
                     </h3>
                     <div className="transition duration-300 group-hover:translate-x-px text-neutral-10 group-hover:text-neutral-11 text-xs">
                       {project.description}
+                    </div>
+                    <div className="transition capitalize duration-300 group-hover:translate-x-px text-neutral-10 group-hover:text-neutral-11 text-xs">
+                      Status: {project.status}
                     </div>
                   </div>
                 </div>

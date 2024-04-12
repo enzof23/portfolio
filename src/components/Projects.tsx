@@ -7,7 +7,7 @@ const projects = [
     description: "Landing page for Heliner's marketing campaign",
     status: "delivered",
     icon: Simple.IconHeliner,
-    url: "https://github.com/enzof23/heliner",
+    url: "https://heliner.vercel.app/",
   },
   {
     title: "InfoShare",

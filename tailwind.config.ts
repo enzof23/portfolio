@@ -30,7 +30,6 @@ export default {
         orbitron: "Orbitron",
       },
       gridTemplateRows: {
-        "layout-sm": "repeat(6, fit-content)",
         "layout-md": "repeat(4, auto)",
       },
       screens: {
